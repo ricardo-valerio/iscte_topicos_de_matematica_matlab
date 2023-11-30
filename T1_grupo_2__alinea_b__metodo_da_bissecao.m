@@ -46,9 +46,9 @@ plot(x_intercept, zeros(size(x_intercept)), 'ro', 'MarkerSize', 10);
 % h é a função
 % sqrt(2) é o limite inferior do intervalo
 % 2 é o limite superior do intervalo
-% 0.001 é o valor dos erros
+% 0.0001 é o valor dos erros
 % 50 é o nº de iterações
-MetBiss(h, sqrt(2), 2, 0.001, 0.001, 50)
+MetBiss(h, sqrt(2), 2, 0.0001, 0.0001, 50)
 % -------------------------------------------------------------------
 
 
