@@ -4,8 +4,8 @@ clf;
 
 
 % -------------------------------------------------------------------
-% retém o gráfico atual e certas propriedades dos eixos
-% de modo a que comandos gráficos subsequentes
+% retém o gráfico atual e certas propriedades dos eixos 
+% de modo a que comandos gráficos subsequentes 
 % adicionem ao gráfico existente.
 hold on;
 % -------------------------------------------------------------------
@@ -18,19 +18,19 @@ ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
 
 
-%  criar uma variável simbólica 'x' ---------------------------------
+%  criar uma variável simbólica 'x' --------------------------------- 
 syms x;
 % -------------------------------------------------------------------
 
 
 % transfomamos o problema da pesquisa do ponto fixo, que resolvemos
-% na alínea anterior, num problema de pesquisa de zeros.
-%
+% na alínea anterior, num problema de pesquisa de zeros. 
+% 
 % Como o ponto fixo é o ponto de interseção entre a função g
 % e a bissetriz dos quadrantes ímpares, temos que:
-%
+% 
 % Ponto fixo <=>  g(x) = x  <=>  g(x) - x = 0
-%
+% 
 % fazendo h(x) = g(x) - x temos: ------------------------------------
 h=@(x) 2-(log(x)/2) - x;
 % -------------------------------------------------------------------

@@ -4,8 +4,8 @@ clf;
 
 
 % -------------------------------------------------------------------
-% retém o gráfico atual e certas propriedades dos eixos
-% de modo a que comandos gráficos subsequentes
+% retém o gráfico atual e certas propriedades dos eixos 
+% de modo a que comandos gráficos subsequentes 
 % adicionem ao gráfico existente.
 hold on;
 % -------------------------------------------------------------------
@@ -22,7 +22,7 @@ ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
 
 
-%  criar uma variável simbólica 'x' ---------------------------------
+%  criar uma variável simbólica 'x' --------------------------------- 
 syms x;
 % -------------------------------------------------------------------
 
@@ -32,14 +32,14 @@ f = @(x) x./(sqrt(x.^2+1)) + 1./(3*(x+2).^2);
 % -------------------------------------------------------------------
 
 
-% Calcular da 2ª derivada -------------------------------------------
+% Calcular da 2ª derivada --------------------------------
 df = diff(f, x, 2);
-% -------------------------------------------------------------------
+% ----------------------------------------------------
 
 
-% Converter a 2ª derivada para uma função MATLAB --------------------
+% Converter a 2ª derivada para uma função MATLAB --------
 df_func = matlabFunction(df);
-% -------------------------------------------------------------------
+% ----------------------------------------------------
 
 
 % desenhar a função no intervalo [-5, 5] ----------------------------

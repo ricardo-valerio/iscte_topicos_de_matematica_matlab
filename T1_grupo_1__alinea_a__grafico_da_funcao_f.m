@@ -4,8 +4,8 @@ clf;
 
 
 % -------------------------------------------------------------------
-% retém o gráfico atual e certas propriedades dos eixos
-% de modo a que comandos gráficos subsequentes
+% retém o gráfico atual e certas propriedades dos eixos 
+% de modo a que comandos gráficos subsequentes 
 % adicionem ao gráfico existente.
 hold on;
 % -------------------------------------------------------------------
@@ -20,9 +20,9 @@ ax = gca;
 ax.XAxisLocation = 'origin';
 ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
+ 
 
-
-%  criar uma variável simbólica 'x' ---------------------------------
+%  criar uma variável simbólica 'x' --------------------------------- 
 syms x;
 % -------------------------------------------------------------------
 
