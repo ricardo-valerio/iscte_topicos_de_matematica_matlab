@@ -47,28 +47,6 @@ df3 = diff(f, x, 3);
 f3 = matlabFunction(df3);
 % -------------------------------------------------------------------
 
-
-% Mostrar cálculos na janelas de comandos ---------------------------
-disp("1ª derivada de f:");
-disp(f1(0));
-disp("2ª derivada de f:");
-disp(f2(0));
-disp("Polinómio de Taylor de 2ª ordem:");
-disp(Taylor(x,0));
-% -------------------------------------------------------------------
-
-
-% calcular o erro cometido usando os valores superiores
-erro_cometido = 3.255*abs(((0.5).^3)/factorial(3));
-
-
-% mostrar o erro máximo cometido
-disp("Erro máximo cometido usando os valores superiores dos cálculos " + ...
-    "anteriores: ");
-disp(erro_cometido);
-disp("3.255*abs(((0.5).^3)/factorial(3) = " + num2str(erro_cometido));
-
-
 % desenhar a função no intervalo [-0.5, 0.5] ------------------------
 fplot(f, [-0.5, 0.5], 'LineWidth', 2);
 % -------------------------------------------------------------------
@@ -96,4 +74,39 @@ grid on;
 
 % desativar o modo de retenção de gráfico ---------------------------
 hold off;
+% -------------------------------------------------------------------
+
+
+
+
+% 4ª derivada para ajudar a encontrar o maior valor em módulo  ------
+df4 = diff(f, x, 4);
+f4 = matlabFunction(df4);
+% -------------------------------------------------------------------
+
+% Maior valor em módulo de df3 entre [0, 0.5]" ----------------------
+maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
+
+disp("Maior valor em módulo de df3 entre [0, 0.5]:")
+disp(maior_valor_em_modulo_de_f3_no_intervalo);
+% -------------------------------------------------------------------
+
+
+% Mostrar cálculos na janelas de comandos ---------------------------
+disp("1ª derivada de f:");
+disp(f1(0));
+disp("2ª derivada de f:");
+disp(f2(0));
+disp("Polinómio de Taylor de 2ª ordem:");
+disp(Taylor(x,0));
+% -------------------------------------------------------------------
+
+
+% calcular o erro cometido usando os valores superiores -------------
+erro_cometido = maior_valor_em_modulo_de_f3_no_intervalo*abs(((0.5).^3)/factorial(3));
+% -------------------------------------------------------------------
+
+% mostrar o erro máximo cometido
+disp("Erro máximo cometido usando os valores superiores dos cálculos:");
+disp(erro_cometido);
 % -------------------------------------------------------------------
