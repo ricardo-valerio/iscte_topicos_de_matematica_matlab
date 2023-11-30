@@ -18,7 +18,7 @@ ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
 
 
-%  criar uma variável simbólica 'x' ---------------------------------
+% criar uma variável simbólica 'x' ----------------------------------
 syms x;
 % -------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ syms x;
 % Ponto fixo <=>  g(x) = x  <=>  g(x) - x = 0
 %
 % fazendo h(x) = g(x) - x temos: ------------------------------------
-h=@(x) 2-(log(x)/2) - x;
+h = @(x) 2 - (log(x)/2) - x;
 % -------------------------------------------------------------------
 
 
@@ -47,7 +47,7 @@ plot(x_intercept, zeros(size(x_intercept)), 'ro', 'MarkerSize', 10);
 % -------------------------------------------------------------------
 
 
-% econtrar o zero através do método da bissecção ---------------------
+% econtrar o zero através do método da bissecção --------------------
 % h é a função
 % sqrt(2) é o limite inferior do intervalo
 % 2 é o limite superior do intervalo

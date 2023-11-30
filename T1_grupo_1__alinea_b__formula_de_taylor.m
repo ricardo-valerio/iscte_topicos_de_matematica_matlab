@@ -22,7 +22,7 @@ ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
 
 
-%  criar uma variável simbólica 'x' ---------------------------------
+% criar uma variável simbólica 'x' ----------------------------------
 syms x;
 % -------------------------------------------------------------------
 
@@ -97,7 +97,7 @@ disp(maior_valor_em_modulo_de_f3_no_intervalo);
 % -------------------------------------------------------------------
 
 
-% Mostrar cálculos na janelas de comandos ---------------------------
+% mostrar cálculos na janelas de comandos ---------------------------
 disp("1ª derivada de f:");
 disp(f1(0));
 disp("2ª derivada de f:");
