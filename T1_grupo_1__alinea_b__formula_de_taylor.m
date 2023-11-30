@@ -58,28 +58,15 @@ disp(Taylor(x,0));
 % -------------------------------------------------------------------
 
 
-% calcular o valor máximo em módulo de f'''(x) no intervalo [-0.5, 0.5]
-% disp("valor da 3ª derivada no valor máximo do intervalo [-0.5, 0.5]:");
-% disp(f3)
-% -------------------------------------------------------------------
-
-% mostrar conclusão dos valores -------------------------------------
-disp("Constatamos que f3(######) é um valor superior e portanto " + ...
-    "f3(x) <= #######" + newline);
-% -------------------------------------------------------------------
-
-% calcular abs(((-0.5).^3)/factorial(3) ou abs(((0.5).^3)/factorial(3)
-disp("valor de: abs(((0.5).^3)/factorial(3):");
-disp(abs(((0.5).^3)/factorial(3)));
-
 % calcular o erro cometido usando os valores superiores
 erro_cometido = 3.255*abs(((0.5).^3)/factorial(3));
+
 
 % mostrar o erro máximo cometido
 disp("Erro máximo cometido usando os valores superiores dos cálculos " + ...
     "anteriores: ");
 disp(erro_cometido);
-disp("f3(0.5)*abs(((0.5).^3)/factorial(3) = " + num2str(erro_cometido));
+disp("3.255*abs(((0.5).^3)/factorial(3) = " + num2str(erro_cometido));
 
 
 % desenhar a função no intervalo [-0.5, 0.5] ------------------------
