@@ -11,18 +11,26 @@ hold on;
 % -------------------------------------------------------------------
 
 
+%  criar uma variável simbólica 'x' --------------------------------- 
+syms x;
+% -------------------------------------------------------------------
+
+
 % função do enunciado -----------------------------------------------
 g=@(x) 2-(log(x)/2);
 % -------------------------------------------------------------------
+
 
 % função y = x ------------------------------------------------------
 bissetriz_dos_quadrantes_impares=@(x) x;
 % -------------------------------------------------------------------
 
+
 % desenhar as funções no intervalo [sqrt(2), 2] ---------------------
 fplot(bissetriz_dos_quadrantes_impares, [sqrt(2), 2]);
 fplot(g, [sqrt(2), 2], 'LineWidth', 2);
 % -------------------------------------------------------------------
+
 
 % desenhar o ponto fixo ---------------------------------------------
 pf_zero = matlabFunction(2-(log(x)/2)-x);
@@ -47,12 +55,14 @@ dg = matlabFunction(diff(g, x));
 fplot(dg, [sqrt(2), 2], 'Color', '#EDB120', 'LineWidth', 2);
 % -------------------------------------------------------------------
 
+
 % mostrar valor de f'(x) nos extremos do intervalo [sqrt(2), 2] -----
 disp("valor de f'(sqrt(2)):")
 disp(dg(sqrt(2)));
 disp("valor de f'(2)):")
 disp(dg(2));
 % -------------------------------------------------------------------
+
 
 % adicionar título e texto aos eixos o gráfico ----------------------
 title({"A função g(x), a bissetriz dos quadrantes " + newline + ...

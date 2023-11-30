@@ -18,6 +18,11 @@ ax.YAxisLocation = 'origin';
 % -------------------------------------------------------------------
 
 
+%  criar uma variável simbólica 'x' --------------------------------- 
+syms x;
+% -------------------------------------------------------------------
+
+
 % transfomamos o problema da pesquisa do ponto fixo, que resolvemos
 % na alínea anterior, num problema de pesquisa de zeros. 
 % 
@@ -67,4 +72,3 @@ grid on;
 % desativar o modo de retenção de gráfico ---------------------------
 hold off;
 % -------------------------------------------------------------------
-
