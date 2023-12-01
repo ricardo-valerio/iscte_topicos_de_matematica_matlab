@@ -52,17 +52,32 @@ df3 = diff(f, x, 3);
 f3 = matlabFunction(df3);
 % -------------------------------------------------------------------
 
+
+% 4ª derivada para ajudar a encontrar o maior valor em módulo  ------
+df4 = diff(f, x, 4);
+f4 = matlabFunction(df4);
+% -------------------------------------------------------------------
+
+
 % desenhar a função no intervalo [-0.5, 0.5] ------------------------
 fplot(f, [-0.5, 0.5], 'LineWidth', 2);
 % -------------------------------------------------------------------
 
+
+% desenhar a função 3ª derivada no intervalo [-0.5, 0.5] ------------
 fplot(f3, [-0.5, 0.5], 'g', 'LineWidth', 2);
+% -------------------------------------------------------------------
 
 
 % desenhar o polinómio de Taylor no intervalo [-5, 5] no ponto a = 0
 fplot(Taylor(x, 0), [-0.5, 0.5], 'r--', 'LineWidth', 2);
 % -------------------------------------------------------------------
 
+
+% desenhar o zero de f4 no intervalo --------------------------------
+pf_intercept = fzero(f4, 0);
+plot(pf_intercept, f3(pf_intercept), 'ro', 'MarkerSize', 10);
+% -------------------------------------------------------------------
 
 % adicionar título e texto aos eixos o gráfico ----------------------
 title({'A função f(x) no intervalo [-0.5, 0.5] e a sua aproximação', ...
@@ -83,15 +98,8 @@ hold off;
 
 
 
-
-% 4ª derivada para ajudar a encontrar o maior valor em módulo  ------
-df4 = diff(f, x, 4);
-f4 = matlabFunction(df4);
-% -------------------------------------------------------------------
-
 % Maior valor em módulo de df3 entre [0, 0.5]" ----------------------
 maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
-
 disp("Maior valor em módulo de df3 entre [0, 0.5]:")
 disp(maior_valor_em_modulo_de_f3_no_intervalo);
 % -------------------------------------------------------------------
