@@ -98,13 +98,6 @@ hold off;
 
 
 
-% Maior valor em módulo de df3 entre [0, 0.5]" ----------------------
-maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
-disp("Maior valor em módulo de df3 entre [0, 0.5]:")
-disp(maior_valor_em_modulo_de_f3_no_intervalo);
-% -------------------------------------------------------------------
-
-
 % mostrar cálculos na janelas de comandos ---------------------------
 disp("1ª derivada de f:");
 disp(f1(0));
@@ -115,11 +108,25 @@ disp(Taylor(x,0));
 % -------------------------------------------------------------------
 
 
-% calcular o erro cometido usando os valores superiores -------------
-erro_cometido = maior_valor_em_modulo_de_f3_no_intervalo*abs(((0.5).^3)/factorial(3));
+% Maior valor em módulo de df3 entre [0, 0.5]" ----------------------
+maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
+disp("Maior valor em módulo de df3 entre [0, 0.5]:")
+disp(maior_valor_em_modulo_de_f3_no_intervalo);
 % -------------------------------------------------------------------
 
-% mostrar o erro máximo cometido
-disp("Erro máximo cometido usando os valores superiores dos cálculos:");
+
+% Maior valor em módulo de (x).^3)/factorial(3) entre [0, 0.5]" -----
+maior_valor_em_modulo_x3_over_3_factorial = abs(((0.5).^3)/factorial(3));
+disp("Maior valor em módulo de df3 entre [0, 0.5]:")
+disp(maior_valor_em_modulo_x3_over_3_factorial);
+% -------------------------------------------------------------------
+
+
+% calcular o erro cometido usando os valores superiores -------------
+erro_cometido = maior_valor_em_modulo_de_f3_no_intervalo*maior_valor_em_modulo_x3_over_3_factorial;
+% -------------------------------------------------------------------
+
+% mostrar o majorante do erro cometido
+disp("Majorante do erro cometido usando os valores superiores dos cálculos:");
 disp(erro_cometido);
 % -------------------------------------------------------------------
