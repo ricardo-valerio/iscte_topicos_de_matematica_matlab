@@ -108,14 +108,14 @@ disp(Taylor(x,0));
 % -------------------------------------------------------------------
 
 
-% Maior valor em módulo de df3 entre [0, x]" ----------------------
+% Maior valor em módulo de df3 entre [-0.5, 0.5] --------------------
 maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
 disp("Maior valor em módulo de df3 entre [0, x]:")
 disp(maior_valor_em_modulo_de_f3_no_intervalo);
 % -------------------------------------------------------------------
 
 
-% Maior valor em módulo de (x).^3)/factorial(3) entre [0, 0.5]" -----
+% Maior valor em módulo de (x.^3)/factorial(3) entre [-0.5, 0.5] ----
 maior_valor_em_modulo_x3_over_3_factorial = abs(((0.5).^3)/factorial(3));
 disp("Maior valor em módulo de df3 entre [0, 0.5]:")
 disp(maior_valor_em_modulo_x3_over_3_factorial);
@@ -126,7 +126,7 @@ disp(maior_valor_em_modulo_x3_over_3_factorial);
 erro_cometido = maior_valor_em_modulo_de_f3_no_intervalo*maior_valor_em_modulo_x3_over_3_factorial;
 % -------------------------------------------------------------------
 
-% mostrar o majorante do erro cometido
+% mostrar o majorante do erro cometido ------------------------------
 disp("Majorante do erro cometido usando os valores superiores dos cálculos:");
 disp(erro_cometido);
 % -------------------------------------------------------------------
