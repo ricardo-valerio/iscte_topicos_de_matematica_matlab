@@ -108,9 +108,9 @@ disp(Taylor(x,0));
 % -------------------------------------------------------------------
 
 
-% Maior valor em módulo de df3 entre [0, 0.5]" ----------------------
+% Maior valor em módulo de df3 entre [0, x]" ----------------------
 maior_valor_em_modulo_de_f3_no_intervalo = abs(f3(fzero(f4, 0)));
-disp("Maior valor em módulo de df3 entre [0, 0.5]:")
+disp("Maior valor em módulo de df3 entre [0, x]:")
 disp(maior_valor_em_modulo_de_f3_no_intervalo);
 % -------------------------------------------------------------------
 
