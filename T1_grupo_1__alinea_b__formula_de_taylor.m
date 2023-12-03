@@ -75,8 +75,8 @@ fplot(Taylor(x, 0), [-0.5, 0.5], 'r--', 'LineWidth', 2);
 
 
 % desenhar o zero de f4 no intervalo --------------------------------
-pf_intercept = fzero(f4, 0);
-plot(pf_intercept, f3(pf_intercept), 'ro', 'MarkerSize', 10);
+minimizante_de_f3 = fzero(f4, 0);
+plot(minimizante_de_f3, f3(minimizante_de_f3), 'ro', 'MarkerSize', 10);
 % -------------------------------------------------------------------
 
 % adicionar título e texto aos eixos o gráfico ----------------------
