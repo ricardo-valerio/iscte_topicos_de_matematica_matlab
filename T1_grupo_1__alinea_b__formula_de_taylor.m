@@ -12,10 +12,6 @@ hold on;
 
 
 % settings do plano cartesiano --------------------------------------
-% set(gca,'xtick',-0.5:0.1:0.5);
-% set(gca,'ytick',-0.5:0.1:0.5);
-% xlim ([-0.5, 0.5]);
-% ylim ([-4, 4]);
 ax = gca;
 ax.XAxisLocation = 'origin';
 ax.YAxisLocation = 'origin';
@@ -127,6 +123,9 @@ erro_cometido = maior_valor_em_modulo_de_f3_no_intervalo*maior_valor_em_modulo_x
 % -------------------------------------------------------------------
 
 % mostrar o majorante do erro cometido ------------------------------
-disp("Majorante do erro cometido usando os valores superiores dos cálculos:");
+disp("Valor exato usando os valores superiores dos cálculos:");
 disp(erro_cometido);
+disp("Majorante do erro cometido (valor anterior arredondado):");
+disp(round(erro_cometido, 3));
+
 % -------------------------------------------------------------------
