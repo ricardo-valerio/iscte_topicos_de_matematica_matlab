@@ -44,14 +44,12 @@ Taylor = @(x,a) f(a) + f1(a)*(x-a) + f2(a)*((x-a).^2)/2;
 
 
 % 3ª derivada para calcular o erro ----------------------------------
-df3 = diff(f, x, 3);
-f3 = matlabFunction(df3);
+f3 = matlabFunction(diff(f, x, 3));
 % -------------------------------------------------------------------
 
 
 % 4ª derivada para ajudar a encontrar o maior valor em módulo  ------
-df4 = diff(f, x, 4);
-f4 = matlabFunction(df4);
+f4 = matlabFunction(diff(f, x, 4));
 % -------------------------------------------------------------------
 
 
