@@ -95,9 +95,9 @@ hold off;
 
 
 % mostrar cálculos na janelas de comandos ---------------------------
-disp("1ª derivada de f:");
+disp("1ª derivada de f no ponto zero:");
 disp(f1(0));
-disp("2ª derivada de f:");
+disp("2ª derivada de f no ponto zero:");
 disp(f2(0));
 disp("Polinómio de Taylor de 2ª ordem:");
 disp(Taylor(x,0));
