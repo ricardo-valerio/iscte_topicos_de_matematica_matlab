@@ -93,7 +93,6 @@ hold off;
 % -------------------------------------------------------------------
 
 
-
 % mostrar cálculos na janelas de comandos ---------------------------
 disp("1ª derivada de f no ponto zero:");
 disp(f1(0));
